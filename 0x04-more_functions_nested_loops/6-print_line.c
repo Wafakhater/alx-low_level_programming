@@ -14,3 +14,4 @@ for (lnchr = 1; lnchr <= n; lnchr++)
 _putchar('_');
 _putchar('\n');
 }
+}
