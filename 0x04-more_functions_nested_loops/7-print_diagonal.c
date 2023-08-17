@@ -14,7 +14,7 @@ for (postn = 1; postn <= n; postn++)
 {
 for (space = 1; space <= postn; space++)
 _putchar(' ');
-/*is equal to '/' char*/
+/*is equal to '\' char*/
 _putchar(92);
 _putchar('\n');
 }
