@@ -15,7 +15,7 @@ return (n >= 32 && n <= 126);
  * @start: starting position
  * @end: ending position
  */
-void printHexes(char *b; int start, int end)
+void printHexes(char *b, int start, int end)
 {
 int i = 0;
 while (i < 10)
@@ -30,13 +30,15 @@ i++
 }
 }
 /**
- * printASCCII - print ascii valuse for string b in formatted to replace nonprintable chars with '.'
+ * printASCCII - print ascii valuse for string b in formatted
+ * to replace nonprintable chars with '.'
  * @b: string to print
  * @start: starting position
  * @end: ending position
  */
 void printASCCII(char *b, int start, int end)
-int ch, i =0;
+{
+int ch, i = 0;
 while (i < end)
 {
 ch = *(b + i + start);
@@ -66,6 +68,5 @@ printf("\n");
 }
 }
 else
-}
 printf("\n");
 }
