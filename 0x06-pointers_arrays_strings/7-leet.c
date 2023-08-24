@@ -18,7 +18,7 @@ for (i = 0; i < sizeof(key) / sizeof(char); i++)
 /*32 is the difference between lower case letters and apper case letters*/
 if (*c == key[i] || *c == key[i] + 32)
 {
-*c = 49 + value[i];
+*c = 48 + value[i];
 }
 }
 c++;
