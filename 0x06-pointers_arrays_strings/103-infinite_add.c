@@ -2,7 +2,7 @@
 /**
  * *infinite_add - add two numbers.
  * @n1: first number
- * @n: second number
+ * @n2: second number
  * @r: result
  * @size_r: result lenght
  * Return: sum.
