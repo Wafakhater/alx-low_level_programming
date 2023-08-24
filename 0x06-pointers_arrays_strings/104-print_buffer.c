@@ -26,7 +26,7 @@ else
 printf(" ");
 if (i % 2)
 printf(" ");
-i++
+i++;
 }
 }
 /**
@@ -45,7 +45,7 @@ ch = *(b + i + start);
 if (!isPrintableASCII(ch))
 ch = 46;
 printf("%c", ch);
-i++
+i++;
 }
 }
 /**
@@ -58,7 +58,7 @@ void print_buffer(char *b, int size)
 int start, end;
 if (size > 0)
 {
-for (start = 0, start < size; start += 10)
+for (start = 0; start < size; start += 10)
 {
 end = (size - start < 10) ? size - start : 10;
 printf("%08x: ", start);
