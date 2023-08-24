@@ -21,7 +21,7 @@ printf("%08x: ", o);
 for (i = 0; i < 10; i++)
 {
 if (i < j)
-printf("%02x", *(b + start + i));
+printf("%02x", *(b + o + i));
 else
 printf(" ");
 if (i % 2)
@@ -31,14 +31,14 @@ printf(" ");
 }
 for (i = 0; i < j; i++)
 {
-int c = *(b, o, i);
-if (c < 32 c > 132)
+int c = *(b + o + i);
+if (c < 32 || c > 132)
 {
 c = '.';
 }
 printf("%c", c);
 }
 printf("\n");
-0 += 10;
+o += 10;
 }
 }
