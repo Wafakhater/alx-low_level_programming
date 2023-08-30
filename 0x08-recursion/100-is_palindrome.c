@@ -32,6 +32,7 @@ return (check(s, 0, end - 1, end % 2));
  * Return: 0 or 1
  */
 int check(char *s, int start, int end, int mod)
+{
 if ((start == end && mod != 0) || (start == end + 1 && mod == 0))
 return (1);
 else if (s[start] != s[end])
