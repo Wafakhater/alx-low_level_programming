@@ -14,6 +14,5 @@ else if (y == i)
 return (x);
 else if (y == 0)
 return (1);
-}
 return (n * _pow_recursion(x, y - 1));
 }
