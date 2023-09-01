@@ -7,7 +7,7 @@
  * @str: array str
  * Return: 0 (success)
  */
-int check_num(char *str)
+int check_num(char const *str)
 {
 /*declaring variables*/
 unsigned int count;
