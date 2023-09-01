@@ -26,6 +26,7 @@ break;
 }
 }
 printf("%d\n", leastcents);
+}
 else
 {
 printf("Error\n");
