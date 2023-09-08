@@ -3,20 +3,6 @@
 #include <stdlib.h>
 #define ERR_MSG "Error"
 /**
- * _puts - ptint a string, followed by a new line.
- * @str: pointer to the string to print
- * Return: void
- */
-void _puts(char *str)
-int i;
-{
-while (str[i])
-{
-_putchar(str[i]);
-i++;
-}
-}
-/**
  * is_digit - checks if a string contains a non_digit char.
  * @s: string to be evaluated
  * Return: 0 if a non-digit is found, 1 otherwise
