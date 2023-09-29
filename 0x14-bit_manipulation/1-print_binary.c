@@ -1,17 +1,27 @@
 #include "main.h"
 
 /**
- * clear_bit - sets the value of a given bit to 0 succeded
- * @n: pointer to the number to change
- * @index: index of the bit to clear
- *
- * Return: 1 if success, -1 if failure
+ * print_binary - prints the binary equivalent of a decimal number succeded
+ * @n: number to print in binary
+ * Return: nothing
  */
-int clear_bit(unsigned long int *n, unsigned int index)
+void print_binary(unsigned long int n)
 {
-	if (index > 63)
-		return (-1);
+	int a, count = 0;
+	unsigned long int current;
 
-	*n = (~(1UL << index) & *n);
-	return (1);
+	for (a = 63; a >= 0; a--)
+	{
+		current = n >> a;
+
+		if (current & 1)
+		{
+			_putchar('1');
+			count++;
+		}
+		else if (count)
+			_putchar('0');
+	}
+	if (!count)
+		_putchar('0');
 }

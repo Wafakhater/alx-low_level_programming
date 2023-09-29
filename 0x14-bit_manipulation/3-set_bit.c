@@ -1,27 +1,17 @@
 #include "main.h"
 
 /**
- * print_binary - prints the binary equivalent of a decimal number succeded
- * @n: number to print in binary
- * Return: nothing
+ * set_bit - sets a bit at a given index to 1 succeded
+ * @n: pointer to the number to change
+ * @index: index of the bit to set to 1
+ *
+ * Return: 1 if success, -1 if failure
  */
-void print_binary(unsigned long int n)
+int set_bit(unsigned long int *n, unsigned int index)
 {
-	int a, count = 0;
-	unsigned long int current;
+	if (index > 63)
+		return (-1);
 
-	for (a = 63; a >= 0; a--)
-	{
-		current = n >> a;
-
-		if (current & 1)
-		{
-			_putchar('1');
-			count++;
-		}
-		else if (count)
-			_putchar('0');
-	}
-	if (!count)
-		_putchar('0');
+	*n = ((1UL << index) | *n);
+	return (1);
 }

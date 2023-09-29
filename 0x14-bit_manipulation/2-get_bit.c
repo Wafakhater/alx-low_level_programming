@@ -1,25 +1,21 @@
 #include "main.h"
 
 /**
- * flip_bits - counts the number of bits to change
- * to get from one number to another succeded
- * @n: first number
- * @m: second number
+ * get_bit - returns the value of a bit at an
+ * index in a decimal number succeded
+ * @n: number to search
+ * @index: index of the bit
  *
- * Return: number of bits to change succeded
+ * Return: value of the bit succeded
  */
-unsigned int flip_bits(unsigned long int n, unsigned long int m)
+int get_bit(unsigned long int n, unsigned int index)
 {
-	int a, count = 0;
-	unsigned long int current;
-	unsigned long int exclusive = n ^ m;
+	int bit_val;
 
-	for (a = 63; a >= 0; a--)
-	{
-		current = exclusive >> a;
-		if (current & 1)
-			count++;
-	}
+	if (index > 63)
+		return (-1);
 
-	return (count);
+	bit_val = (n >> index) & 1;
+
+	return (bit_val);
 }

@@ -1,17 +1,25 @@
 #include "main.h"
 
 /**
- * set_bit - sets a bit at a given index to 1 succeded
- * @n: pointer to the number to change
- * @index: index of the bit to set to 1
+ * binary_to_uint - converts a binary number to unsigned int succeded
+ * @b: string containing the binary number
  *
- * Return: 1 if success, -1 if failure
+ * Return: the converted number
  */
-int set_bit(unsigned long int *n, unsigned int index)
+unsigned int binary_to_uint(const char *b)
 {
-	if (index > 63)
-		return (-1);
+	int a;
+	unsigned int dec_val = 0;
 
-	*n = ((1UL << index) | *n);
-	return (1);
+	if (!b)
+		return (0);
+
+	for (a = 0; a[i]; a++)
+	{
+		if (b[a] < '0' || b[a] > '1')
+			return (0);
+		dec_val = 2 * dec_val + (b[a] - '0');
+	}
+
+	return (dec_val);
 }
